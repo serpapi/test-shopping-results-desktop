@@ -3,7 +3,7 @@ describe "SerpApi Desktop JSON" do
   describe "Shopping Results for TV" do
 
     before :all do
-      @response = HTTP.get 'http://localhost:3000/search.json?q=TV&tbm=shop&location=Dallas&hl=en&gl=us&source=test'
+      @response = HTTP.get 'https://serpapi.com/search.json?q=TV&tbm=shop&location=Dallas&hl=en&gl=us&source=test'
       @json = @response.parse
     end
 
