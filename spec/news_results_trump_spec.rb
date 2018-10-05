@@ -1,9 +1,9 @@
 describe "SerpApi Desktop JSON" do
 
-  describe "Shopping Results for Television" do
+  describe "Shopping Results for TV" do
 
     before :all do
-      @response = HTTP.get 'http://localhost:3000/search.json?q=Television&tbm=shop&location=Dallas&hl=en&gl=us&source=test'
+      @response = HTTP.get 'http://localhost:3000/search.json?q=TV&tbm=shop&location=Dallas&hl=en&gl=us&source=test'
       @json = @response.parse
     end
 
@@ -37,20 +37,24 @@ describe "SerpApi Desktop JSON" do
         expect(@first_result["link"]).to_not be_empty
       end
 
-      it "has a source" do
-        expect(@first_result["source"]).to_not be_empty
+      it "has a rating" do
+        expect(@first_result["rating"]).to be_an(Float)
       end
 
-      it "has an date" do
-        expect(@first_result["date"]).to_not be_empty
+      it "has a review count" do
+        expect(@first_result["review_count"]).to be_an(Integer)
       end
 
-      it "has an snippet" do
+      it "has a snippet" do
         expect(@first_result["snippet"]).to_not be_empty
       end
 
-      it "has an thumbnail" do
-        expect(@first_result["thumbnail"]).to_not be_empty
+      it "has extensions" do
+        expect(@first_result["extensions"]).to be_an(Array)
+      end
+
+      it "has at least one extension with text" do
+        expect(@first_result["extensions"][0]).to_not be_empty
       end
 
     end
