@@ -1,5 +1,5 @@
-# News Results Desktop
+# Shopping Results Desktop
 
-[![Build Status](https://travis-ci.org/serpapi/test-news-results-desktop.svg?branch=master)](https://travis-ci.org/serpapi/test-news-results-desktop)
+[![Build Status](https://travis-ci.org/serpapi/test-shopping-results-desktop.svg?branch=master)](https://travis-ci.org/serpapi/test-shopping-results-desktop)
 
-Tests for SerpApi News results on desktop
+Tests for SerpApi Shopping results on desktop
