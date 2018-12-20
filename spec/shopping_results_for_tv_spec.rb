@@ -11,15 +11,15 @@ describe "SerpApi Desktop JSON" do
       expect(@response.code).to be(200)
     end
 
-    it "contains News Results array" do
+    it "contains Shopping Results array" do
       expect(@json["shopping_results"]).to be_an(Array)
     end
 
-    it "News Results array has more than 10 results" do
+    it "Shopping Results array has more than 10 results" do
       expect(@json["shopping_results"].size).to be > 10
     end
 
-    describe "has a first news results" do
+    describe "has a first shopping results" do
 
       before :all do
         @first_result = @json["shopping_results"][0]
