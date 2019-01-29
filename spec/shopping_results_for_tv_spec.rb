@@ -29,12 +29,20 @@ describe "SerpApi Desktop JSON" do
         expect(@first_result["position"]).to be(1)
       end
 
+      it "has a thumbnail" do
+        expect(@first_result["thumbnail"]).to_not be_empty
+      end
+
       it "has a title" do
         expect(@first_result["title"]).to_not be_empty
       end
 
       it "has a link" do
         expect(@first_result["link"]).to_not be_empty
+      end
+
+      it "has a source" do
+        expect(@first_result["source"]).to_not be_empty
       end
 
       it "has a rating" do
