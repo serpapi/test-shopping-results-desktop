@@ -50,7 +50,7 @@ describe "SerpApi Desktop JSON" do
       end
 
       it "has a review count" do
-        expect(@first_result["review_count"]).to be_an(Integer)
+        expect(@first_result["reviews"]).to be_an(Integer)
       end
 
       it "has a snippet" do
